@@ -154,10 +154,19 @@ img {
   height: 100%;
   top: 0;
   left: 0;
-  background-repeat: no-repeat;
-  background-position: center top; }
+  background-repeat: no-repeat; }
   .lines--opp {
-    background-image: url("../img/lines-opp-all.png"); }
+    background-image: url("../img/lines-opp-all.png");
+    background-position: left -882px top -768px;
+    background-size: 247%; }
+    @media screen and (max-width: 1366px) {
+      .lines--opp {
+        background-position: left -254px top -267px;
+        background-size: 198%; } }
+  .lines--about {
+    background-image: url("../img/lines-about-all.png"); }
+  .lines--header {
+    background-image: url("../img/lines-header-all.png"); }
 
 .list-disc {
   padding-left: 12px; }
@@ -348,6 +357,9 @@ p.important {
     left: 54.1666666667%;
     top: 297px;
     width: 32%; }
+    @media screen and (max-width: 1366px) {
+      .opportunities-image {
+        top: 30%; } }
   .opportunities-content {
     padding: 164px 0 204px; }
     .opportunities-content h3 {

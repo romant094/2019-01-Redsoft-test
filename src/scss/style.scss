@@ -109,9 +109,20 @@ img {
     top: 0;
     left: 0;
     background-repeat: no-repeat;
-    background-position: center top;
     &--opp {
         background-image: url('../img/lines-opp-all.png');
+        background-position: left -882px top -768px;
+        background-size: 247%;
+        @media screen and (max-width: 1366px) {
+            background-position: left -254px top -267px;
+            background-size: 198%;
+        }
+    }
+    &--about {
+        background-image: url('../img/lines-about-all.png');
+    }
+    &--header {
+        background-image: url('../img/lines-header-all.png');
     }
 }
 
@@ -361,6 +372,9 @@ p.important {
         left: percentVal(1040);
         top: 297px;
         width: 32%;
+        @media screen and (max-width: 1366px) {
+            top: 30%;
+        }
     }
     &-content {
         padding: 164px 0 204px;
