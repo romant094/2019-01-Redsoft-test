@@ -11,12 +11,57 @@
 
 <body>
     <header class="header">
-        <div class="container">
+        <div class="header-top">
+            <div class="container">
+                <div class="navigation display-flex">
+                    <div class="navigation-logo">
+                        <a href="#">
+                            <img src="img/logo-header.png" alt="МОЁ ЗДОВРОВЬЕ">
+                        </a>
+                    </div>
+                    <nav class="navigation-menu">
+                        <ul class="navigation-list display-flex">
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">О сервисе</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">Функции</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">Возможности</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">Партнеры</a></li>
+                            <li class="navigation-list__item"><a href="#" class="btn btn-secondary">Оставить заявку</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="peppermint carousel" id="carousel">
 
+                <div class="carousel-slide display-flex">
+                    <div class="carousel-slide__content">
+                        <h3>Расширяем возможности предоставления качественных медицинских услуг</h3>
+                        <p>«Дневник здоровья» – новый сервис для самоконтроля показателей состояния здоровья,
+                            разработанный для участников программы «Мое здоровье».</p>
+                        <a href="#" class="btn btn-primary btn-white">Узнать больше</a>
+                    </div>
+                </div>
+
+                <div class="carousel-slide display-flex">
+                    <div class="carousel-slide__content">
+                        <h3>Расширяем возможности предоставления качественных медицинских услуг</h3>
+                        <p>«Дневник здоровья» – новый сервис для самоконтроля показателей состояния здоровья,
+                            разработанный для участников программы «Мое здоровье».</p>
+                        <a href="#" class="btn btn-primary btn-white">Узнать больше</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-dots display-flex"></div>
         </div>
     </header>
     <section class="about">
-        <div class="container container--right">
+        <div class="about-image">
+            <img src="img/about.png" alt="">
+        </div>
+        <div class="container container--right container--afterbg">
             <div class="about-content">
                 <h3>Что такое «Дневник здоровья»?</h3>
                 <p class="about-content__summary">Дневник пациента — это удобный онлайн-сервис:</p>
@@ -43,7 +88,7 @@
                     </li>
                 </ul>
                 <div class="about-content__request">
-                    <a href="#" class="btn">Оставить заявку</a>
+                    <a href="#" class="btn btn-primary">Оставить заявку</a>
                 </div>
             </div>
         </div>
@@ -88,6 +133,7 @@
         </div>
     </section>
     <section class="opportunities">
+        <div class="lines lines--opp"></div>
         <div class="opportunities-image">
             <img src="img/opportunities.png" alt="Возможности">
         </div>
@@ -168,7 +214,7 @@
                         <input type="text" placeholder="Ваш E-mail">
                     </div>
                     <div class="form-control">
-                        <a href="#" class="btn">Отправить</a>
+                        <a href="#" class="btn btn-primary">Отправить</a>
                     </div>
                 </form>
             </div>
@@ -201,28 +247,22 @@
             </div>
         </div>
     </footer>
-    <!-- TODO Delete this script -->
+
+    <script src="components/peppermint/peppermint.min.js"></script>
+
     <script>
-        const btn = document.createElement('div');
-        btn.textContent = 'Click';
-        btn.style.width = '75px';
-        btn.style.height = '75px';
-        btn.style.position = 'fixed';
-        btn.style.bottom = '50px';
-        btn.style.right = '50px';
-        btn.style.backgroundColor = '#000';
-        btn.style.color = '#fff';
-        btn.style.display = 'flex';
-        btn.style.justifyContent = 'center';
-        btn.style.alignItems = 'center';
-        btn.style.borderRadius = '100px';
-        btn.style.cursor = 'pointer';
-
-        document.body.appendChild(btn);
-
-        btn.addEventListener('click',()=>{
-            alert(document.body.clientWidth+'x'+document.body.clientHeight);
-        });        
+        const carousel = Peppermint(document.querySelector('#carousel'), {
+                slideshow: true,
+                speed: 500,
+                touchSpeed: 300,
+                slideshowInterval: 3500,
+                dots: true,
+                dotsContainer: document.querySelector('.carousel-dots'),
+                onSetup: function(numberOfSlides){
+                    const dots = document.querySelector('.peppermint-dots');
+                    dots.style.width = `${16 * 2 + 16 * numberOfSlides + 8 * (numberOfSlides - 1)}px`;
+                }
+            });
     </script>
 </body>
 
