@@ -1,34 +1,9 @@
-@import '../css/reset.css';
+// @import '../css/reset.css';
 @import './fonts';
 @import './grid';
 @import '../components/peppermint/peppermint.suggested.css';
-$color-16: #4f699b;
-$color-11: #23b3e2;
-$color-3: #ffffff;
-$color-13: #c9005a;
-$color-2: #60759d;
-$color-21: #335b91;
-$color-10: #cbe2fb;
-$color-18: #a8b2bf;
-$color-19: #e3e7f2;
-$color-15: #31496b;
-$color-17: #39649d;
-$color-9: #5489c3;
-$color-7: #e70067;
-$color-4: #4c6fa6;
-$color-1: #16afe0;
-$color-6: #fafbfd;
-$color-14: #f8f8f8;
-$color-20: #fafaff;
-$color-8: #f0f5ff;
-$color-5: #fdfffc;
-$color-12: #b8c9e5;
-$color100200: #ccc;
-$max-width:1920;
-@function percentVal($value) {
-    @return ($value / $max-width)*100%;
-}
-
+@import '../css/animate.css';
+@import './var';
 body,
 html {
     font-family: 'Cera', 'Ubuntu', sans-serif;
@@ -120,9 +95,13 @@ img {
     }
     &--about {
         background-image: url('../img/lines-about-all.png');
-    }
-    &--header {
-        background-image: url('../img/lines-header-all.png');
+        background-position: left -1860px top -1000px;
+        top: -23px;
+        background-size: 151%;
+        @media screen and (max-width: 1366px) {
+            background-position: left -2040px top -721px;
+            background-size: 197%;
+        }
     }
 }
 
@@ -233,8 +212,7 @@ p.important {
 }
 
 .header {
-    background: url('../img/header-bg-img.png') no-repeat center top;
-    height: 751px;
+    background: url('../img/lines-header-all.png') no-repeat center top, url('../img/header-bg-img.png') no-repeat center top;
     &-top {
         padding-top: 31px;
         .navigation {
@@ -249,8 +227,9 @@ p.important {
     }
     &-bottom {
         padding-top: 125px;
+        padding-bottom: 37px;
         .carousel {
-            margin-bottom: 95px;
+            margin-bottom: 45px;
             @media screen and (max-width: 1580px) {
                 margin-bottom: 45px;
             }
@@ -330,9 +309,7 @@ p.important {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: url('../img/functions-bg.png') center top no-repeat; // background-image: linear-gradient(to bottom, #0e72b7 0%, #282b64 100%);
-        // opacity: 0.04;
-        // border-radius: 50% 50% 0% 0% / 7% 7% 0% 0%;
+        background: url('../img/functions-bg.png') center top no-repeat;
     }
     &-content {
         padding: 163px 0 171px;
@@ -472,7 +449,7 @@ p.important {
         position: absolute;
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(to bottom, #0e72b7 0%, #282b64 100%); // opacity: .1;
+        background-image: linear-gradient(to bottom, #0e72b7 0%, #282b64 100%);
         opacity: .1;
     }
     &-content {

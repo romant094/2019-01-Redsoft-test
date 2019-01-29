@@ -4,6 +4,7 @@ const gulp = require('gulp'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-clean-css'),
+    copy = require('gulp-copy'),
     browserSync = require('browser-sync').create(),
     imagemin = require('gulp-imagemin');
 
@@ -34,11 +35,11 @@ gulp.task('img', () => {
 });
 
 gulp.task('watch', ['browser-sync'], function () {
-    gulp.watch('./src/index.html', browserSync.reload);
-    gulp.watch('./src/scss/style.css', browserSync.reload);
+    gulp.watch(`${config.destPath}/index.html`, browserSync.reload);
+    gulp.watch(`${config.destPath}/css/style.min.css`, browserSync.reload);
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
     browserSync.init({
         server: {
             baseDir: "./src/"

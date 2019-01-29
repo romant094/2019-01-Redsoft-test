@@ -87,20 +87,24 @@
 }
 
 .peppermint.peppermint-active {
-    margin-bottom: 1.5em;
+    /* margin-bottom: 1.5em; */
 }
 
 .peppermint-slides {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    margin-bottom: 148px;
+    /* margin-bottom: 60px; */
 }
 
 /* dots */
 
 ul.peppermint-dots {
-    margin: 0.6em 0;
-    padding: 0;
+    /* margin: 0.6em 0; */
+    display: flex;
+    justify-content: center;
+    padding: 8px 16px 9px 10px;
+    border: 1px solid #5489c3;
+    border-radius: 50px;
     text-align: center;
     list-style-type: none;
 }
@@ -113,12 +117,9 @@ ul.peppermint-dots {
     margin: 0.6em 0 0 0;
 }
 
-ul.peppermint-dots {}
-
 ul.peppermint-dots>li {
     display: inline-block;
     position: relative;
-    padding: 0.5em 0.6em;
     width: 16px;
     height: 1px;
     cursor: pointer;
@@ -132,6 +133,10 @@ ul.peppermint-dots>li {
     /* ie7 fallback */
     *display: inline;
     *zoom: 1;
+}
+
+ul.peppermint-dots>li:not(:last-child) {
+    margin-right: 8px;
 }
 
 ul.peppermint-dots>li.peppermint-mouse-clicked,
@@ -149,6 +154,7 @@ ul.peppermint-dots>li>span {
     height: 1px;
     border-radius: 50%;
     background: #5489c3;
+    margin-top: 0.02em;
 }
 
 ul.peppermint-dots>li.peppermint-active-dot>span {

@@ -1,0 +1,26 @@
+$color-16: #4f699b;
+$color-11: #23b3e2;
+$color-3: #ffffff;
+$color-13: #c9005a;
+$color-2: #60759d;
+$color-21: #335b91;
+$color-10: #cbe2fb;
+$color-18: #a8b2bf;
+$color-19: #e3e7f2;
+$color-15: #31496b;
+$color-17: #39649d;
+$color-9: #5489c3;
+$color-7: #e70067;
+$color-4: #4c6fa6;
+$color-1: #16afe0;
+$color-6: #fafbfd;
+$color-14: #f8f8f8;
+$color-20: #fafaff;
+$color-8: #f0f5ff;
+$color-5: #fdfffc;
+$color-12: #b8c9e5;
+$color100200: #ccc;
+$max-width:1920;
+@function percentVal($value) {
+    @return ($value / $max-width)*100%;
+}

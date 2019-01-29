@@ -1,45 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Мое здоровье</title>
 </head>
+
 <body>
     <header class="header">
-        <div class="container">
+        <div class="header-top">
+            <div class="container">
+                <div class="navigation display-flex">
+                    <div class="navigation-logo">
+                        <a href="#">
+                            <img src="img/logo-header.png" alt="МОЁ ЗДОВРОВЬЕ">
+                        </a>
+                    </div>
+                    <nav class="navigation-menu">
+                        <ul class="navigation-list display-flex">
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">О сервисе</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">Функции</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">Возможности</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">Партнеры</a></li>
+                            <li class="navigation-list__item"><a href="#" class="btn btn-secondary">Оставить заявку</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="peppermint carousel" id="carousel">
 
+                <div class="carousel-slide display-flex">
+                    <div class="carousel-slide__content">
+                        <h3>Расширяем возможности предоставления качественных медицинских услуг</h3>
+                        <p>«Дневник здоровья» – новый сервис для самоконтроля показателей состояния здоровья,
+                            разработанный для участников программы «Мое здоровье».</p>
+                        <a href="#" class="btn btn-primary btn-white">Узнать больше</a>
+                    </div>
+                </div>
+
+                <div class="carousel-slide display-flex">
+                    <div class="carousel-slide__content">
+                        <h3>Расширяем возможности предоставления качественных медицинских услуг</h3>
+                        <p>«Дневник здоровья» – новый сервис для самоконтроля показателей состояния здоровья,
+                            разработанный для участников программы «Мое здоровье».</p>
+                        <a href="#" class="btn btn-primary btn-white">Узнать больше</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-dots display-flex"></div>
         </div>
     </header>
-    <section class="about"></section>
-    <section class="functions"></section>
-    <section class="opportunities"></section>
-    <section class="specialists"></section>
-    <section class="access"></section>
+    <section class="about">
+        <div class="lines lines--about"></div>
+        <div class="about-image">
+            <img src="img/about.png" alt="">
+        </div>
+        <div class="container container--right container--afterbg">
+            <div class="about-content">
+                <h3>Что такое «Дневник здоровья»?</h3>
+                <p class="about-content__summary">Дневник пациента — это удобный онлайн-сервис:</p>
+                <ul class="about-content__list list-disc">
+                    <li class="list-disc__item">
+                        <p>
+                            Вносите результаты измерений вручную или с помощью интегрированных приборов
+                        </p>
+                    </li>
+                    <li class="list-disc__item">
+                        <p>
+                            Ведите персональную медицинскую карту с историей ваших измерений
+                        </p>
+                    </li>
+                    <li class="list-disc__item">
+                        <p>
+                            Делитесь результатами измерений со специалистами для повышения эффективности лечения
+                        </p>
+                    </li>
+                    <li class="list-disc__item">
+                        <p>
+                            Получайте рекомендации, созданные специально для вас
+                        </p>
+                    </li>
+                </ul>
+                <div class="about-content__request">
+                    <a href="#" class="btn btn-primary">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="functions">
+        <div class="functions-background"></div>
+        <div class="container container--afterbg">
+            <div class="functions-content">
+                <h3>Функции приложения</h3>
+                <div class="grid">
+                    <div class="row space-between wrap margin-tb with-gutters">
+                        <div class="col col-1-of-3 functions-content__one">
+                            <span class="m-auto"><img src="img/001-medicine.png" alt=""></span>
+                            <p>Планирование графика<br>приема лекарств</p>
+                        </div>
+                        <div class="col col-1-of-3 functions-content__one">
+                            <span class="m-auto"><img src="img/002-siren.png" alt=""></span>
+                            <p>Уведомление врача<br>об исполнении назначений</p>
+                        </div>
+                        <div class="col col-1-of-3 functions-content__one">
+                            <span class="m-auto"><img src="img/003-health.png" alt=""></span>
+                            <p>Ведение дневника<br>самочувствия</p>
+                        </div>
+                    </div>
+                    <div class="row space-between wrap margin-tb with-gutters">
+                        <div class="col col-1-of-3 functions-content__one">
+                            <span class="m-auto"><img src="img/004-smartwatch.png" alt=""></span>
+                            <p>Удаленное предоставление<br>измерений врачу</p>
+                        </div>
+                        <div class="col col-1-of-3 functions-content__one">
+                            <span class="m-auto"><img src="img/006-conversation.png" alt=""></span>
+                            <p>Общение с врачами<br>через встроенный мессенджер</p>
+                        </div>
+                        <div class="col col-1-of-3 functions-content__one">
+                            <span class="m-auto"><img src="img/005-facebook.png" alt=""></span>
+                            <p>Получение уведомлений<br>для выполнения назначений</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="opportunities">
+        <div class="lines lines--opp"></div>
+        <div class="opportunities-image">
+            <img src="img/opportunities.png" alt="Возможности">
+        </div>
+        <div class="container">
+            <div class="opportunities-content">
+                <h3>Ведите персональный дневник мониторинга здоровья</h3>
+                <ul class="opportunities-content__list">
+                    <li class="list-item first">
+                        <h4>Хранение данных</h4>
+                        <p>Контролируйте и следите за динамикой изменения показателей вашего здоровья. Вносите
+                            результаты измерений медицинских показателей вручную или с помощью интегрированных
+                            приборов, храните историю измерений и отслеживайте динамику состояния здоровья</p>
+                    </li>
+                    <li class="list-item second">
+                        <h4>Сообшение информации врачу</h4>
+                        <p>Позвольте специалисту дистанционно следить за вашим здоровьем. <br>Будьте на связи со
+                            специалистом - отправляйте информацию о своем самочувствии, обменивайтесь сообщениями и
+                            получайте рекомендации по вашему здоровью и лечению.</p>
+                    </li>
+                    <li class="list-item third">
+                        <h4>Напоминание о важном</h4>
+                        <p>Получайте рекомендации, созданные специально для вас. <br>Система, персонально настроенная
+                            под ваши требования, автоматически напомнит о необходимости выполнить рекомендации
+                            медицинского специалиста: принять препарат или выполнить измерения.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="analytics">
+        <div class="analytics-background"></div>
+        <div class="analytics-image">
+            <img src="img/analytics.png" alt="Аналитика">
+        </div>
+        <div class="container container--right container--afterbg">
+            <div class="analytics-content">
+                <h3>Специалистам</h3>
+                <ul class="analytics-content__list list-disc">
+                    <li class="list-disc__item">
+                        <p>
+                            Дистанционный контроль состояния здоровья ваших пациентов
+                        </p>
+                    </li>
+                    <li class="list-disc__item">
+                        <p>
+                            Наблюдение за динамикой изменения основных медицинских показателей
+                        </p>
+                    </li>
+                    <li class="list-disc__item">
+                        <p>
+                            Наличие алгоритмов автоматического анализа поступающей информации
+                        </p>
+                    </li>
+                    <li class="list-disc__item">
+                        <p>
+                            Индивидуальная система уведомлений об изменении состояния каждого пациента
+                        </p>
+                    </li>
+                    <li class="list-disc__item">
+                        <p>
+                            Дополнительный сервис коммуникации, позволяющий активно вовлекать пациента в процесс
+                            профилактики, лечения и реабилитации.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="access">
+        <div class="access-background"></div>
+        <div class="container container--afterbg">
+            <div class="access-content">
+                <h3>Получите бесплатный доступ к «Дневнику здоровья»</h3>
+                <p class="important m-auto">Оставьте свою электронную почту и вы узнаете о запуске данного сервиса
+                    первым!</p>
+                <form action="#" class="form display-flex">
+                    <div class="form-control">
+                        <input type="text" placeholder="Ваш E-mail">
+                    </div>
+                    <div class="form-control">
+                        <a href="#" class="btn btn-primary">Отправить</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <div class="container">
-            <div class="navigation">
-                <div class="navigation-logo">
-                    <a href="http://" target="_blank" rel="noopener noreferrer">
-                        <img src="img/logo-footer.png" alt="МОЁ ЗДОВРОВЬЕ">
-                    </a>
+            <div class="footer-top">
+                <div class="navigation display-flex">
+                    <div class="navigation-logo">
+                        <a href="#">
+                            <img src="img/logo-footer.png" alt="МОЁ ЗДОВРОВЬЕ">
+                        </a>
+                    </div>
+                    <nav class="navigation-menu">
+                        <ul class="navigation-list display-flex">
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">О сервисе</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">Функции</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">Возможности</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">Специалистам</a></li>
+                            <li class="navigation-list__item"><a href="tel:+78005004549" class="navigation-list__link">88005004549</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="navigation-menu">
-                    <ul class="navigation-list">
-                        <li class="navigation-list__item"><a href="#" class="navigation-list__link">О сервисе</a></li>
-                        <li class="navigation-list__item"><a href="#" class="navigation-list__link">Функции</a></li>
-                        <li class="navigation-list__item"><a href="#" class="navigation-list__link">Возможности</a></li>
-                        <li class="navigation-list__item"><a href="#" class="navigation-list__link">Специалистам</a></li>
-                        <li class="navigation-list__item"><a href="tel:+78005004549" class="navigation-list__link">88005004549</a></li>
-                    </ul>
-                </nav>
             </div>
             <div class="footer-bottom">
-                <div class="developer"><span></span></div>
+                <div class="developer">
+                    Разработка сайта <a href="#">Redsoft</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script src="components/peppermint/peppermint.min.js"></script>
+
+    <script>
+        const carousel = Peppermint(document.querySelector('#carousel'), {
+            slideshow: true,
+            speed: 500,
+            touchSpeed: 300,
+            slideshowInterval: 3500,
+            dots: true,
+            dotsContainer: document.querySelector('.carousel-dots'),
+            onSetup: function (numberOfSlides) {
+                const dots = document.querySelector('.peppermint-dots');
+                dots.style.width = `${16 * 2 + 16 * numberOfSlides + 8 * (numberOfSlides - 1)}px`;
+            }
+        });
+    </script>
 </body>
+
 </html>
